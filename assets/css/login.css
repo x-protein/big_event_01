@@ -1,3 +1,4 @@
+/* 设置背景图片 */
 body,
 html {
     padding: 0;
@@ -30,5 +31,34 @@ html {
 .titleBox {
     width: 100%;
     height: 60px;
+    background-color: #000;
     background: url('/assets/images/login_title.png') no-repeat center;
+}
+
+/* 修改注册和登录区域两边的距离 */
+.layui-form {
+    padding: 0 30px;
+}
+
+/* a链接位置的修改 */
+.links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* 子绝父相 */
+.layui-form-item {
+    position: relative;
+}
+
+/* 给字体图标点位 */
+.layui-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* 给输入框一个padding */
+.layui-input {
+    padding: 0 35px 0;
 }
