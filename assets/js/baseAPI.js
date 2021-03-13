@@ -13,7 +13,9 @@ $(function () {
     // 处理参数
     $.ajaxPrefilter(function (params) {
         // console.log(params);
-
+        // if ('http://127.0.0.1:5500' === '') {
+        //     return;
+        // }
         /* 拼接对应环境服务器地址 */
         params.url = baseURL + params.url;
 
