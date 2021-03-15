@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章管理</title>
+    <!-- 引入 layui css 文件 -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <!-- 引入 本页面的 css 文件 -->
+    <link rel="stylesheet" href="/assets/css/atricle/atr_cate.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">文章类别管理
+            <button type="button" class="layui-btn layui-btn-sm">添加类别</button>
+        </div>
+        <div class="layui-card-body">
+            <table class="layui-table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col width="200">
+
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>分类名称</th>
+                        <th>分类别名</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>
+                            <button type="button" class="layui-btn layui-btn-sm  layui-btn-xs">编辑</button>
+                            <button type="button"
+                                class="layui-btn layui-btn-sm  layui-btn-xs layui-btn-danger">删除</button>
+                        </td>
+                    </tr> -->
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="/assets/lib/template-web.js"></script>
+    <script type="text/html" id="t1">
+{{each data}}
+<tr>
+    <td>{{$value.name}}</td>
+    <td>{{$value.alias}}</td>
+    <td>
+        <button type="button" class="layui-btn layui-btn-sm  layui-btn-xs">编辑</button>
+        <button type="button"
+            class="layui-btn layui-btn-sm  layui-btn-xs layui-btn-danger" >删除</button>
+    </td>
+</tr>
+{{/each}}
+</script>
+
+    <!-- 引入 layui js 文件 -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- 引入 jQuery 文件 -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 引入 baseAPI 文件 -->
+    <script src="/assets/js/baseAPI.js"></script>
+    <!-- 引入 本页面的 js 文件 -->
+    <script src="/assets/js/article/art_cote.js"></script>
+</body>
+
+</html>
