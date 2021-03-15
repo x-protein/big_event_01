@@ -43,7 +43,7 @@ function getUserInof() {
 function renderAvatar(user) {
     // 1.渲染名称
     var name = user.nickname || user.username;
-    $('#welcome1').html('欢迎&nbsp;&nbsp;' + name);
+    $('#welcome').html('欢迎&nbsp;&nbsp;' + name);
     if (user.user_pic !== null) {
         // 有头像
         $('.layui-nav-img').show().attr('src', user.user_pic);
