@@ -26,11 +26,11 @@ $(function () {
     });
 
     $('.layui-form').on('submit', function (e) {
-        e.preventDefault();
+       $$()
         $.ajax({
             url: "/my/updatepwd",
             type: "POST",
-            data: $(this).serialize(),
+            data: layui,
             success: (res) => {
                 console.log(res);
                 if (res.status !== 0) {
